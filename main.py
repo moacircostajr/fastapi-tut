@@ -45,13 +45,13 @@ async def get_model(model_name: ModelName):
     return {"model_name": model_name, "message": "Have some residuals"}
 
 
-@app.get("/items/")
+@app.get("/items/")  #  rotas fixas devem estar no inicio do script
 async def read_item(skip: int = 0, limit: int = 10):
-    return fake_items_db[skip: skip + limit]
+    return fake_items_db[skip: skip + limit]  #  retorno paginado
 
 
 @app.get("/items/{item_id}")
-async def read_item(item_id: str, q: Union[str, None] = None, short: bool = False):
+async def read_item(item_id: str, q: Union[str, None] = None, short: bool = False):  #  q e short são parâmetros de consulta opcionais -> http://127.0.0.1:8000/items/2?short=True
     item = {"item_id": item_id}
     if q:
         item.update({"q": q})
@@ -64,7 +64,7 @@ async def read_item(item_id: str, q: Union[str, None] = None, short: bool = Fals
 
 @app.get("/users/{user_id}/items/{item_id}")
 async def read_user_item(
-    user_id: int, item_id: str, q: Union[str, None] = None, short: bool = False
+    user_id: int, item_id: str, short: bool, q: Union[str, None] = None  #  o parametro de consulta short é obrigatório
 ):
     item = {"item_id": item_id, "owner_id": user_id}
     if q:
