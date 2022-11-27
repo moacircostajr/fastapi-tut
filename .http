@@ -2,10 +2,28 @@ POST http://127.0.0.1:8000/items HTTP/1.1
 content-type: application/json
 
 {
-  "name": "string",
-  "description": "string",
-  "price": 0,
-  "tax": 0
+    "name": "Foo",
+    "description": "Uma descrição opcional",
+    "price": 45.2,
+    "tax": 3.5
 }
+
+###
+
+POST http://127.0.0.1:8000/items HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Foo",
+    "price": 45.2
+}
+
+###
+
+GET http://127.0.0.1:8000/manyItems?q=foo&q=bar&q=ue&q=fixedquery HTTP/1.1
+
+###
+
+GET http://127.0.0.1:8000/ HTTP/1.1
 
 ###

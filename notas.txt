@@ -1,3 +1,2 @@
 ANDAMENTO:
-CORPO DA REQUISIÇÃO
-https://fastapi.tiangolo.com/pt/tutorial/body/
+https://fastapi.tiangolo.com/pt/tutorial/request-files/
