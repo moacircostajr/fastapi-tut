@@ -1,2 +1,7 @@
 ANDAMENTO:
-https://fastapi.tiangolo.com/pt/tutorial/request-files/
+https://fastapi.tiangolo.com/pt/tutorial/
+
+(venv) moacir@moacircosta-nb:~/workspace/python/fastapi-tut$ pip install --upgrade setuptools
+(venv) moacir@moacircosta-nb:~/workspace/python/fastapi-tut$ pip install python-multipart
+
+pip install requests
